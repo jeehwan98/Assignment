@@ -1,0 +1,26 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>항공사 조회</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>항공사 번호</th>
+            <th>항공사 이름</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="airline : ${ airlineList }">
+            <td th:text="${ airline.airlineNo }"></td>
+            <td th:text="${ airline.airlineName }"></td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>
